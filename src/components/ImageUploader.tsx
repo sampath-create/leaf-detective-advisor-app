@@ -94,7 +94,11 @@ const ImageUploader = ({ onImageSelect }: ImageUploaderProps) => {
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div
-        className={`drop-zone ${isDragging ? "border-primary bg-primary/5" : ""}`}
+        className={`drop-zone p-8 border-2 border-dashed rounded-lg transition-colors ${
+          isDragging 
+            ? "border-primary bg-primary/5" 
+            : "border-gray-200 hover:border-primary/50"
+        }`}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
         onDragOver={handleDragOver}
