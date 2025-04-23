@@ -4,20 +4,20 @@ import Header from "@/components/Header";
 import ImageUploader from "@/components/ImageUploader";
 import AnalysisResult from "@/components/AnalysisResult";
 import LeafCard from "@/components/LeafCard";
-import { Leaf, Plant, Search } from "lucide-react";
-import { analyzeLeaf, diseases, Disease } from "@/data/diseases";
+import { Leaf, Sprout, Search } from "lucide-react";
+import { analyzeLeaf, diseases } from "@/data/diseases";
 
 interface AnalysisHistory {
   id: string;
   imageUrl: string;
-  disease: Disease;
+  disease: typeof diseases[number];
   timestamp: string;
 }
 
 const Index = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [analyzing, setAnalyzing] = useState(false);
-  const [diseaseResult, setDiseaseResult] = useState<Disease | null>(null);
+  const [diseaseResult, setDiseaseResult] = useState<typeof diseases[number] | null>(null);
   const [history, setHistory] = useState<AnalysisHistory[]>([]);
 
   // Load history from local storage on component mount
@@ -103,7 +103,7 @@ const Index = () => {
                 </div>
                 <div className="flex flex-col items-center max-w-[180px]">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-3">
-                    <Plant className="h-8 w-8 text-primary" />
+                    <Sprout className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="font-medium text-gray-800 mb-1">Get Solutions</h3>
                   <p className="text-sm text-gray-500 text-center">

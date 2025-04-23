@@ -1,13 +1,13 @@
 
 import { useState, useEffect } from "react";
-import { Disease } from "@/data/diseases";
+import { diseases } from "@/data/diseases";
 import { Bug, Microscope, TestTube, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface AnalysisResultProps {
-  disease: Disease | null;
+  disease: typeof diseases[number] | null;
   isLoading: boolean;
   onReset: () => void;
 }
