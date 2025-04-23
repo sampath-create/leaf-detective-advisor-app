@@ -164,7 +164,7 @@ const Index = () => {
             </p>
           </div>
           <p className="text-xs text-gray-400 mt-2 md:mt-0">
-            For educational purposes. Not a substitute for professional plant care advice.
+            Developed by VVITU STUDENTS. For educational purposes. Not a substitute for professional plant care advice.
           </p>
         </div>
       </footer>
